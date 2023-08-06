@@ -1,0 +1,10 @@
+2023-08-06 06:17:04.148087 - Initialized conversion of CBT655
+2023-08-06 06:17:04.222916 - Received CBT.V505.FILE655.PDS from FILE655.XMI 
+2023-08-06 06:17:04.225144 - Found $$$#DATE.txt (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/$$$#DATE
+2023-08-06 06:17:04.226097 - Found $$$INSTR.txt (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/$$$INSTR
+2023-08-06 06:17:04.227338 - Found $$NOTE01.txt (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/$$NOTE01
+2023-08-06 06:17:04.228420 - Found $$NOTE02.txt (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/$$NOTE02
+2023-08-06 06:17:04.229382 - Found @FILE655.txt (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/@FILE655
+2023-08-06 06:17:04.230572 - Found CATCLJCL.rexx (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/CATCLJCL
+2023-08-06 06:17:04.231627 - Found CATCLRJC.jcl (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/CATCLRJC
+2023-08-06 06:17:04.232595 - Found CATCLR3.rexx (text/plain) in CBT.V505.FILE655.PDS, moved to PDS/CATCLR3

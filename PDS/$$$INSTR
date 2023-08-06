@@ -1,0 +1,51 @@
+              INSTRUCTIONS FOR USING CATCLR3
+
+This is just from trying to use CATCLR3.  It seems that
+CATCLR3 has two operating modes:  RUNTYPE=T or RUNTYPE=anything.else
+
+You might as well set anything.else equal to D.
+
+So, if you run CATCLR3 with RUNTYPE=T, the syntax would be:
+
+TSO CATCLR3 T catalog.name.unquoted
+
+And the result would be something VERY SIMILAR to the output
+of MCNVTCAT (from old IBM CBIPO packaging), or RCNVTCAT, which
+is a REXX exec on CBT File 542.
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+However, RUNTYPE=D produces far different output.
+
+The syntax for RUNTYPE=D would be:
+
+TSO CATCLR3 D catalog.name.unquoted
+
+And the output of this run would be a bunch of DELETE dataset NOSCRATCH
+statements for all datasets that are cataloged in the catalog, for
+which the volume is not mounted, or which cannot be found.
+
+This type of run will clean up the catalog entries, to make sure
+that all entries point to datasets that are "really there".
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+The output of each type of run is a set of datasets:
+
+Suppose the catalog you are looking at, is called MVSUSER.USERCAT.
+Then the output of CATCLR3, with RUNTYPE=T would be:
+
+       prefix.MVSUSER.USERCAT.CNTL
+       prefix.MVSUSER.USERCAT.PDS
+       prefix.MVSUSER.USERCAT.RPT
+       prefix.MVSUSER.USERCAT.SYSPRINT
+
+And the output of CATCLR3, with RUNTYPE=D would be:
+
+       prefix.MVSUSER.USERCAT.CNTL
+       prefix.MVSUSER.USERCAT.SYSPRINT
+
+Best of luck with this.  It is a very nice and helpful REXX.
+
+                                 S.Golob  (Mar 2021)
+
