@@ -1,0 +1,24 @@
+        Correction to the CATCLR3 exec - from Xiayang
+        ---------- -- --- ------- ----
+
+The error was in this section of the code, starting on line 766.
+
+/* ----------------------------------------------------------
+/* Collect all of the available information about the file.
+/* ----------------------------------------------------------
+IF RetCode=0 & ListCat.0 > 0 THEN
+   DO y=1 TO ListCat.0
+      PARSE VAR ListCat.y p1 p2 p3 p4 .
+            SELECT
+
+was changed to
+
+      PARSE VAR ListCat.y X1 X2 X3 X4 .
+            SELECT
+
+in order to avoid a conflict with variables, later in
+the program.  This fix was courtesy of Xiayang.
+
+      email:  xiayang <13916076262@139.com>
+
+
